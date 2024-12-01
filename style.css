@@ -1,0 +1,272 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
+main {
+  width: 100%;
+  max-width: 500px;
+  max-height: 600px;
+  padding: 1rem;
+  
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Banner styling */
+.banner {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+/* Styling the lines (hr) */
+.line {
+  border: 0;
+  border-top: 2px solid #007bff;
+  width: 100px;
+  margin: 0 20px;
+}
+
+/* Styling the message */
+.message {
+  color: #f03e79; 
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1.5px;
+}
+
+/* Box styling */
+.box {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden; 
+}
+
+.box label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin: 0.8rem;
+ 
+ 
+}
+.border-color{
+  border: 2px solid #f03e79;
+}
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+ 
+}
+
+.inline-box{
+  width: 150px;
+  
+}
+.inline-content-1{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.offer {
+  background-color: #f03e79;
+  color: #ffffff;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  margin: 0.2rem 0;
+}
+
+.subtext {
+  font-size: 0.8rem;
+  color: black;
+  margin: 0px 10px;
+}
+
+.price h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.price small {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.price small del {
+  text-decoration: line-through;
+}
+
+.content {
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  display: none;
+}
+.options{
+  justify-content: center;
+}
+.rank{
+  padding-top: 23px;
+}
+/* Show content when radio button is selected */
+input[type="radio"]:checked ~ .content {
+  display: block;
+}
+
+/* Align color and size options side by side */
+.content label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.content select {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Flexbox for Color and Size to display them side by side */
+.content .options {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.content .options > label {
+  flex: 1;
+}
+
+.content .options select {
+  width: 100%;
+}
+
+#tag-content{
+
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  background-color: #f03e79;
+  padding: 5px 5px;
+  font-size: 8px;
+  transform: translateY(0%);
+}
+
+
+/* Free Delivery and Total Price */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+
+.footer .free-delivery {
+  font-size: 0.9rem;
+  color: #28a745;
+}
+
+.footer .total-price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-container {
+  margin-top: 1rem;
+ max-width: inherit;
+}
+
+.add-to-cart-btn {
+  background-color: #f03e79;
+  color: white;
+  padding: 0.8rem 5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e00d53;
+}
+
+.powered-by {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+}
+
+@media  (max-width:537px) {
+  main{
+    max-height: 500px;
+    max-width: 300px;
+  }
+  .line{
+    width: 50px;
+  }
+  .message{
+    font-size: 0.7rem;
+  }
+  .price h3{
+    font-size: 0.9rem;
+  }
+  .price small{
+    font-size: 0.7rem;
+  }
+  h3{
+    font-size: 0.9rem;
+  }
+  .offer{
+    font-size: 0.6rem;
+  }
+  .free-delivery{
+    font-size: 0.8rem;
+  }
+  .total-price{
+    font-size: 0.9rem;
+  }
+  .button-container{
+    margin-top: 0.9rem;
+  }
+}
+
+@media (max-width:325px) {
+  .price h3{
+    font-size: 0.8rem;
+  }
+  .total-price{
+    font-size: 0.8rem;
+  }
+}
